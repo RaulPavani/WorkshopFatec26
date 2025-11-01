@@ -7,9 +7,17 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 10f;
     
+    [SerializeField] private bool isGrounded = false;
+    public LayerMask groundLayer;
+    
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
+    
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -19,11 +27,38 @@ public class PlayerController : MonoBehaviour
             rigidBody.linearVelocity = 
                 new Vector2(Input.GetAxis("Horizontal") * speed, 
                     rigidBody.linearVelocity.y);
+            
+            animator.SetBool("Walking", true);
+            if (rigidBody.linearVelocity.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            if (rigidBody.linearVelocity.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
             rigidBody.AddForceY(jumpForce);
+            isGrounded = false;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //(1<<other.gameObject.layer) & groundLayer) != 0
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    
 }
