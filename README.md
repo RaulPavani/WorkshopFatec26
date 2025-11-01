@@ -1,5 +1,5 @@
-Versão da Unity: 6000.2.6f2
-Um jogo plataforma simples feito durante o curso de extensão de Unity na Fatec Americana
+Versão da Unity: 6000.2.6f2 <br>
+Um jogo plataforma simples feito durante o curso de extensão de Unity na Fatec Americana <br>
 
 ## Semana 1 ##
 Introdução a [Unity](https://learn.unity.com/tutorial/what-is-unity) <br>
