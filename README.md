@@ -9,6 +9,9 @@ Ciclo de vida [MonoBehaviour](https://docs.unity3d.com/6000.2/Documentation/Scri
 Primeiro [Script](https://docs.unity3d.com/6000.2/Documentation/Manual/creating-scripts.html) - PlayerController <br>
 
 ## Semana 2 ##
+Colisão baseada em [Layers](https://docs.unity3d.com/6000.2/Documentation/Manual/LayerBasedCollision.html) <br>
+[OnTriggerEnter](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Collider.OnTriggerEnter.html) e [OnCollisionEnter](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Collider.OnCollisionEnter.html) <br>
+Animação do personagem ([Animator](https://docs.unity3d.com/6000.2/Documentation/Manual/class-AnimatorController.html) e [Animation](https://docs.unity3d.com/6000.2/Documentation/Manual/AnimationSection.html)) <br>
 
 ## Semana 3 ##
 
