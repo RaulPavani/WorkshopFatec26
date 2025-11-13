@@ -14,5 +14,13 @@ Colisão baseada em [Layers](https://docs.unity3d.com/6000.2/Documentation/Manua
 Animação do personagem ([Animator](https://docs.unity3d.com/6000.2/Documentation/Manual/class-AnimatorController.html) e [Animation](https://docs.unity3d.com/6000.2/Documentation/Manual/AnimationSection.html)) <br>
 
 ## Semana 3 ##
+Colisão baseada em [Tags](https://docs.unity3d.com/6000.2/Documentation/Manual/Tags.html) <br>
+[Particle System](https://learn.unity.com/tutorial/introduction-to-particle-systems) <br>
+Delay para invocar ações ([Coroutine](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Coroutine.html) e [Invoke](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/MonoBehaviour.Invoke.html)) <br>
+[Design Patterns](https://gameprogrammingpatterns.com/contents.html) - [Singleton](https://jogoscomcafe.wordpress.com/2021/03/11/tutorial-singleton-unity/) <br>
+[UnityEvent](https://www.youtube.com/watch?v=djW7g6Bnyrc) e [Eventos do C#](https://learn.unity.com/tutorial/eventos-w?version=2019.3)
 
 ## Semana 4 ##
+Scriptable Objects
+SceneManagement 
+UI
