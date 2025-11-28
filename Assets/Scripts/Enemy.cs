@@ -40,4 +40,13 @@ public class Enemy : MonoBehaviour
         Gizmos.color =  Color.darkGreen;
         Gizmos.DrawLine(transform.position  + Vector3.up, wallDetector.position);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerController>().Jump();
+            Destroy(gameObject);
+        }
+    }
 }

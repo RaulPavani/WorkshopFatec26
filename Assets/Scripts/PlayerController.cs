@@ -46,10 +46,16 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
         {
-            rigidBody.AddForceY(jumpForce);
-            animator.SetTrigger("Jump");
-            isGrounded = false;
+            Jump();
         }
+    }
+
+    public void Jump()
+    {
+        rigidBody.linearVelocityY = 0;
+        rigidBody.AddForceY(jumpForce);
+        animator.SetTrigger("Jump");
+        isGrounded = false;
     }
 
     void LateUpdate()
