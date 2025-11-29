@@ -14,7 +14,7 @@ public class Coin : MonoBehaviour
             //using UnityEngine.Events;
             Collect?.Invoke();
             Disable();
-            MoneyManager.instance.money++;
+            MoneyManager.instance.AddMoney(1);
         }
     }
 

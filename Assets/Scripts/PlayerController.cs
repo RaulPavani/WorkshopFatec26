@@ -1,11 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigidBody;
     public float speed = 5f;
     public float jumpForce = 10f;
+    [Header("Health"), Tooltip("Teste tooltip")]
+    public int health = 3;
+    public Image healthBar;
+    
+    public GameObject gameOverPanel;
     
     [SerializeField] private bool isGrounded = false;
     public LayerMask groundLayer;
@@ -72,5 +78,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy")) TakeDamage();
+    }
+
+    private void TakeDamage()
+    {
+        health--;
+        healthBar.fillAmount = health / 3f;
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            gameOverPanel.SetActive(true);
+        }
+    }
 }

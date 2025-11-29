@@ -11,8 +11,13 @@ public class Enemy : MonoBehaviour
     public Vector2 velocity = new Vector2(5, 0); //(x,y)
     public bool faceRight = true;
 
+    public EnemyConfig config;
+    
     private void Start()
     {
+        velocity.x = config.speed;
+        GetComponent<SpriteRenderer>().color = config.color;
+        
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
