@@ -21,6 +21,6 @@ Delay para invocar ações ([Coroutine](https://docs.unity3d.com/6000.2/Document
 [UnityEvent](https://www.youtube.com/watch?v=djW7g6Bnyrc) e [Eventos do C#](https://learn.unity.com/tutorial/eventos-w?version=2019.3)
 
 ## Semana 4 ##
-Scriptable Objects
-SceneManagement 
-UI
+[Scriptable Objects](https://docs.unity3d.com/6000.2/Documentation/Manual/class-ScriptableObject.html) <br>
+[SceneManagement](https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.html) <br>
+UI - [Canvas](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/UICanvas.html) <br>
